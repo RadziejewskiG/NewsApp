@@ -4,7 +4,9 @@
 This is a simple Football News app which contains three screens:
 - News list screen: a list of football news with a title, date and a small photo. The list is paginated and the new page is loaded when the user reaches the bottom of the current list. Clicking on news redirects to the News details screen.
 - News details screen: it contains detailed information about the clicked article (full title, date, full-sized photo and formatted article&apos;s body - from html).
-- Matches screen: a list of matches between two teams with live-updated score (using fake SDK provided as an attachment to the task). The News screens (list, details) and Matches screen are accessible by clicking the proper tab on the Bottom Navigation Bar (which is always visible). The back navigation is properly handled and the app is switching between the tabs and nested destinations:
+- Matches screen: a list of matches between two teams with live-updated score (using fake SDK provided as an attachment to the task).
+
+The News screens (list, details) and Matches screen are accessible by clicking the proper tab on the Bottom Navigation Bar (which is always visible). The back navigation is properly handled and the app is switching between the tabs and nested destinations:
 - Matches screen -> News details screen -> News list screen
 - Matches screen -> News list screen
 - News details screen -> News list screen
