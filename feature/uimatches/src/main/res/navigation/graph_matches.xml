@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_matches"
+    app:startDestination="@id/fragmentMatches">
+
+    <fragment
+        android:id="@+id/fragmentMatches"
+        tools:layout="@layout/fragment_matches"
+        android:name="com.radziejewskig.feature.uimatches.screen.FragmentMatches"
+        android:label="@string/menu_item_matches" />
+
+</navigation>

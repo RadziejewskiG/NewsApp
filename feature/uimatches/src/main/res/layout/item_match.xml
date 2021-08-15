@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_match_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorOnPrimary"
+    android:paddingStart="@dimen/dp16"
+    android:paddingEnd="@dimen/dp16"
+    android:paddingTop="@dimen/dp16"
+    android:paddingBottom="@dimen/dp16">
+
+    <TextView
+        android:id="@+id/item_match_score"
+        style="@style/MaterialTextViewStyleMediumTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp28"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:textColor="@color/green_darker"
+        tools:text="0 - 2" />
+
+    <TextView
+        android:id="@+id/item_match_team_a"
+        style="@style/MaterialTextViewStyleTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp20"
+        android:textSize="@dimen/sp16"
+        android:gravity="center"
+        android:minLines="2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_match_score"
+        tools:text="TEAM A" />
+
+    <TextView
+        android:id="@+id/item_match_team_b"
+        style="@style/MaterialTextViewStyleTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:textSize="@dimen/sp16"
+        android:gravity="center"
+        android:minLines="2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_match_score"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="TEAM B" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

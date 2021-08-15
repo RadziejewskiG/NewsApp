@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_news"
+    app:startDestination="@id/fragmentNewsList">
+
+    <fragment
+        android:id="@+id/fragmentNewsList"
+        android:name="com.radziejewskig.feature.uinews.screen.newslist.FragmentNewsList"
+        tools:layout="@layout/fragment_news_list"
+        android:label="@string/menu_item_news" >
+        <action
+            android:id="@+id/action_fragmentNewsList_to_fragmentNewsDetails"
+            app:destination="@id/fragmentNewsDetails"
+            app:enterAnim="@anim/fade_in_scale_down"
+            app:exitAnim="@anim/fade_out_scale_up"
+            app:popEnterAnim="@anim/fade_in_scale_down"
+            app:popExitAnim="@anim/fade_out_0_ms" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentNewsDetails"
+        android:name="com.radziejewskig.feature.uinews.screen.newsdetails.FragmentNewsDetails"
+        tools:layout="@layout/fragment_news_details"
+        android:label="FragmentNewsDetails" >
+        <argument
+            android:name="newsId"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+</navigation>

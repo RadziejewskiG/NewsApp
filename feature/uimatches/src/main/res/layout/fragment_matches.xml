@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/colorSurface"
+    android:id="@+id/matches_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/matches_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_match"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/matches_progress_bar"
+        android:layout_width="@dimen/dp48"
+        android:layout_height="@dimen/dp48"
+        android:indeterminate="true"
+        android:clickable="false"
+        app:indicatorColor="?attr/colorSecondary"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:indeterminate="false"
+        tools:progress="50"/>
+
+</FrameLayout>

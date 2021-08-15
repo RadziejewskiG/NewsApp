@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:background="?attr/colorOnPrimary"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mainNavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/graph_main" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:backgroundTint="?attr/colorOnPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_app_bar_height"
+        android:layout_gravity="bottom"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp"
+        app:menu="@null"
+        app:elevation="@dimen/dp6"
+        app:navigationIcon="@null">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorOnPrimary"
+            app:labelVisibilityMode="selected"
+            app:itemTextColor="@color/selector_navigation_item_color"
+            app:itemIconTint="@color/selector_navigation_item_color"
+            app:itemRippleColor="?attr/rippleColor"
+            app:itemIconSize="@dimen/dp26"
+            app:itemTextAppearanceActive="@style/Text12Medium"
+            app:itemTextAppearanceInactive="@style/Text12Medium"
+            app:menu="@menu/menu_main_nav" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
